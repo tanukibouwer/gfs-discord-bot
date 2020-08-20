@@ -1,0 +1,8 @@
+# Discord bot token and google API key.
+gfs_bot/gfs_bot/token.txt
+gfs_bot/gfs_bot/api.txt
+
+# Build stuff and visual studio stuff
+gfs_bot/.vs
+gfs_bot/gfs_bot/bin
+gfs_bot/gfs_bot/obj

@@ -5,7 +5,8 @@ People often ask on the GFS discord server whether Gamefromscratch has already c
 
 ## Usage
 When the bot is online, type !check [name of topic here], and the bot will automatically look for a GFS Youtube video on the topic.
-Example:
+
+For example:
 ![!check libgdx](https://i.imgur.com/AYpcL8B.png)
 
 ## Contributing

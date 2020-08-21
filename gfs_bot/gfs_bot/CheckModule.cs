@@ -13,10 +13,6 @@ namespace gfs_bot
 {
 	public class CheckModule : ModuleBase<SocketCommandContext>
 	{
-		[Command("say")]
-		[Summary("Echoes a message")]
-		public Task SayAsync([Remainder] [Summary("The text to echo")] string echo)
-			=> ReplyAsync(echo);
 
 		[Command("check")]
 		[Summary("Checks whether Gamefromscratch has ever covered something.")]

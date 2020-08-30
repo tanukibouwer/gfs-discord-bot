@@ -38,7 +38,7 @@ namespace gfs_bot
 
 				if (relevant)
 				{
-					message = "Yes! Here's a video: https://www.youtube.com/watch?v=" + video.Id + "\nIt was posted on " + video.Date.Month + "-" + video.Date.Day + "-" + video.Date.Year;
+					message = "Yes! Here's a video: https://www.youtube.com/watch?v=" + video.Id + "\nIt was posted on " + video.Date.Day + "-" + video.Date.Month + "-" + video.Date.Year;
 				}
 				else
 				{

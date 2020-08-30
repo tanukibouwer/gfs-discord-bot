@@ -38,7 +38,7 @@ namespace gfs_bot
 
 				if (relevant)
 				{
-					message = "Yes! Here's a video: https://www.youtube.com/watch?v=" + video.Id;
+					message = "Yes! Here's a video: https://www.youtube.com/watch?v=" + video.Id + "\nIt was posted on " + video.Date.Month + "-" + video.Date.Day + "-" + video.Date.Year;
 				}
 				else
 				{
@@ -80,7 +80,8 @@ namespace gfs_bot
 					videos.Add(new YoutubeVideo()
 					{
 						Id = responseVideo.Id.VideoId,
-						Title = responseVideo.Snippet.Title
+						Title = responseVideo.Snippet.Title,
+						Date = DateTime.Parse(responseVideo.Snippet.PublishedAt, null, System.Globalization.DateTimeStyles.RoundtripKind)
 					});
 				}
 			}
@@ -98,6 +99,7 @@ namespace gfs_bot
 	{
 		public string Id { get; set; }
 		public string Title { get; set; }
+		public DateTime Date { get; set; }
 	}
 
 	public class NoVidFoundException : Exception

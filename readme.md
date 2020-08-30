@@ -22,5 +22,7 @@ You can supply these by adding a `token.txt` file and an `api.txt` file in the p
 `token.txt` should just contain a Discord bot token and nothing else, and `api.txt` should contain a Google API key and nothing else.
 The bot should then automatically read these files and be able to properly connect with Discord and Youtube.
 
+Also, in the root folder of this repository is a neat icon you can use for the bot, so have fun with that.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

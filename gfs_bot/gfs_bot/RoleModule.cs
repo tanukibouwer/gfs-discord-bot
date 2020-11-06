@@ -53,6 +53,11 @@ namespace gfs_bot
 			}
 			await RoleMessage.Message.DeleteAsync();
 			RoleMessage.Message = null;
+			Config.Reload();
+			Program.config.RoleMessage.MessageID = 0;
+			Program.config.RoleMessage.ChannelID = 0;
+
+			Config.Save();
 			await Context.Message.AddReactionAsync(new Emoji("👍"));
 		}
 	}

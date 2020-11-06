@@ -13,7 +13,6 @@ namespace gfs_bot
 {
 	public class CheckModule : ModuleBase<SocketCommandContext>
 	{
-
 		[Command("check")]
 		[Summary("Checks whether Gamefromscratch has ever covered something.")]
 		public async Task CheckAsync([Remainder][Summary("The thing to check")] string query)
@@ -63,7 +62,7 @@ namespace gfs_bot
 		{
 			List<YoutubeVideo> videos = new List<YoutubeVideo>();
 
-			using (var youtubeService = new YouTubeService(new BaseClientService.Initializer() { ApiKey = File.ReadAllText("api.txt") }))
+			using (var youtubeService = new YouTubeService(new BaseClientService.Initializer() { ApiKey = Program.config.Api }))
 			{
 				var searchListRequest = youtubeService.Search.List("snippet");
 				searchListRequest.Q = query;

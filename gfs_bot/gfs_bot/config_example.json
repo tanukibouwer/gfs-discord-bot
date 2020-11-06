@@ -1,0 +1,23 @@
+﻿{
+	"Prefix": "!",
+	"Api": "",
+	"Token": "",
+	"Roles": {
+		"Programmer": {
+			"Emoji": "🖥",
+			"RoleID": 773603028301119519
+		},
+		"Arist": {
+			"Emoji": "🖌️",
+			"RoleID": 773603030129180692
+		},
+		"Musician": {
+			"Emoji": "🎵",
+			"RoleID": 773603082000400414
+		},
+		"Ping me": {
+			"Emoji": "🏓",
+			"RoleID": 774331880953872385
+		}
+	}
+}

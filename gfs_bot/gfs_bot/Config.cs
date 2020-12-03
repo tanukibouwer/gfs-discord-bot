@@ -23,9 +23,17 @@ namespace gfs_bot
 			{
 				configText = File.ReadAllText("config.json");
 			}
+			catch(System.Security.SecurityException)
+			{
+				return string.Format("No sufficient permission to read `config.json` from '{0}'.", Path.GetFullPath("config.json"));
+			}
+			catch(System.IO.FileNotFoundException)
+			{
+				return string.Format("Could not find `config.json` at '{0}'.", Path.GetFullPath("config.json"));
+			}
 			catch
 			{
-				return "Could not read `config.json`. (Does it exist?)";
+				return string.Format("Could not read `config.json` from '{0}'. (Does it exist?)", Path.GetFullPath("config.json"));
 			}
 
 			try

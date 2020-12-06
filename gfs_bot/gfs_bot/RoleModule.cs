@@ -10,11 +10,17 @@ namespace gfs_bot
 {
 	public class RoleModule : ModuleBase<SocketCommandContext>
 	{
-		[RequireUserPermission(GuildPermission.ManageRoles)]
+//		[RequireUserPermission(GuildPermission.ManageRoles)]
 		[Command("create_role_message")]
 		[Summary("Creates a message for people to get roles.")]
 		public async Task CreateRoleMessage()
 		{
+			SocketGuildUser user = Context.Guild.GetUser(Context.User.Id);
+			if (!user.GuildPermissions.ManageRoles) {
+				Console.WriteLine("create_role_message was called, but the user didn't have the manage roles permission!");
+				return;
+			}
+
 			if (RoleMessage.Message != null)
 			{
 				await ReplyAsync("A role message already exists! Please remove that one first by calling `!remove_role_message`.");

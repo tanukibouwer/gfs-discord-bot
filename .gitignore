@@ -4,5 +4,6 @@ gfs_bot/gfs_bot/config.json
 # Build stuff and visual studio stuff
 gfs_bot/.vs
 gfs_bot/.vscode
+.vscode
 gfs_bot/gfs_bot/bin
 gfs_bot/gfs_bot/obj
